@@ -17,5 +17,6 @@
 
 //= require jquery
 //= require bootstrap-sprockets
+//= require fetch
 
 //= require offers
