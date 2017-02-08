@@ -1,0 +1,27 @@
+default: &default
+  prepared_statements: false
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+
+development:
+  <<: *default
+  host: localhost
+  port: 5432
+  database: tuideni_development
+  username: tuideni
+  password:
+
+test:
+  <<: *default
+  host: localhost
+  port: 5432
+  database: tuideni_test
+  pool: 5
+  username: tuideni
+  password:
+
+production:
+  <<: *default
+  pool: <%= ENV['DB_POOL'] || ENV['MAX_THREADS'] || 5 %>
