@@ -7,7 +7,7 @@ module OfferCreator
       response = client.multicast(User.pluck(:line_id), [
           {
             "type": "text",
-            "text": '今から大規模実験装置で実験するけど、なにかついでにやっておきましょうか？'
+            "text": 'なにかついでに実験しましょうか？'
           }
         ])
       Offer.create()
