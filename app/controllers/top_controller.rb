@@ -9,4 +9,7 @@ class TopController < ApplicationController
     MessageParser.parse(request)
     head 200, content_type: 'text/html'
   end
+
+  def line
+  end
 end
